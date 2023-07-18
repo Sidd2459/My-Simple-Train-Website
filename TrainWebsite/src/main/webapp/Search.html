@@ -1,0 +1,85 @@
+<html>
+<head>
+	<title>Train Booking Search</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="author" content="colorlib.com">
+<link rel="icon" type="image/png" href="images/icons/favicon.ico" />
+<style id="" media="all">@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://colorlib.com/fonts.gstatic.com/s/poppins/v20/pxiEyp8kv8JHgFVrJJfedw.ttf) format('truetype');
+}
+</style>
+<link href="css2/main.css" rel="stylesheet" />
+<meta name="robots" content="noindex, follow">
+<script nonce="ff913c55-8ced-4187-b464-29e54aff6c45">(function(w,d){!function(bg,bh,bi,bj){bg[bi]=bg[bi]||{};bg[bi].executed=[];bg.zaraz={deferred:[],listeners:[]};bg.zaraz.q=[];bg.zaraz._f=function(bk){return function(){var bl=Array.prototype.slice.call(arguments);bg.zaraz.q.push({m:bk,a:bl})}};for(const bm of["track","set","debug"])bg.zaraz[bm]=bg.zaraz._f(bm);bg.zaraz.init=()=>{var bn=bh.getElementsByTagName(bj)[0],bo=bh.createElement(bj),bp=bh.getElementsByTagName("title")[0];bp&&(bg[bi].t=bh.getElementsByTagName("title")[0].text);bg[bi].x=Math.random();bg[bi].w=bg.screen.width;bg[bi].h=bg.screen.height;bg[bi].j=bg.innerHeight;bg[bi].e=bg.innerWidth;bg[bi].l=bg.location.href;bg[bi].r=bh.referrer;bg[bi].k=bg.screen.colorDepth;bg[bi].n=bh.characterSet;bg[bi].o=(new Date).getTimezoneOffset();if(bg.dataLayer)for(const bt of Object.entries(Object.entries(dataLayer).reduce(((bu,bv)=>({...bu[1],...bv[1]})),{})))zaraz.set(bt[0],bt[1],{scope:"page"});bg[bi].q=[];for(;bg.zaraz.q.length;){const bw=bg.zaraz.q.shift();bg[bi].q.push(bw)}bo.defer=!0;for(const bx of[localStorage,sessionStorage])Object.keys(bx||{}).filter((bz=>bz.startsWith("_zaraz_"))).forEach((by=>{try{bg[bi]["z_"+by.slice(7)]=JSON.parse(bx.getItem(by))}catch{bg[bi]["z_"+by.slice(7)]=bx.getItem(by)}}));bo.referrerPolicy="origin";bo.src="../../../cdn-cgi/zaraz/sd0d9.js?z="+btoa(encodeURIComponent(JSON.stringify(bg[bi])));bn.parentNode.insertBefore(bo,bn)};["complete","interactive"].includes(bh.readyState)?zaraz.init():bg.addEventListener("DOMContentLoaded",zaraz.init)}(w,d,"zarazData","script");})(window,document);</script></head>
+<body>
+<div class="s01">
+<form onsubmit="return myValidation()" action="SearchProcess.jsp" method="post">
+<fieldset>
+<legend>Discover Your Train Journey...</legend>
+</fieldset>
+<div class="inner-form">
+<div class="input-field first-wrap">
+
+
+
+<input id="search" type="text" name="src1" placeholder="Train Source" />
+</div>
+
+
+
+<div class="input-field second-wrap">
+<input id="location" type="text" name="dest1" placeholder="Train Destination" />
+</div>
+<div class="input-field third-wrap">
+<input class="btn-search" type="submit">
+</div>
+</div>
+<br>
+<div  align="center" >
+<b><font id="serror" color=red></font></b>
+</div>
+<div  align="center" >
+<b><font id="lerror" color=red></font></b>
+</div>
+</form>
+</div>
+
+<script>
+function myValidation() {
+  var x = document.getElementById("search").value;
+  var x1 = document.getElementById("location").value;
+  var scheck=/^[A-Z]{3,}$/g;
+  var lcheck=/^[A-Z]{3,}$/g;
+  if(scheck.test(x)){
+  document.getElementById('serror').innerHTML =" ";
+  
+}else{
+ document.getElementById('serror').innerHTML ="Please Enter the Details in CAPITAL LETTERS ....";
+ return false;
+}
+if(lcheck.test(x1)){
+  document.getElementById('lerror').innerHTML =" ";
+  
+}else{
+ document.getElementById('lerror').innerHTML ="Please Enter the Details in CAPITAL LETTERS ....";
+ return false;
+}}
+
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-23581568-13');
+</script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v2cb3a2ab87c5498db5ce7e6608cf55231689030342039" integrity="sha512-DI3rPuZDcpH/mSGyN22erN5QFnhl760f50/te7FTIYxodEF8jJnSFnfnmG/c+osmIQemvUrnBtxnMpNdzvx1/g==" data-cf-beacon='{"rayId":"7e78c3d0d8049385","version":"2023.4.0","b":1,"token":"cd0b4b3a733644fc843ef0b185f98241","si":100}' crossorigin="anonymous"></script>
+</body>
+</html>
